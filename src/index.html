@@ -3,7 +3,76 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/2399160396.js"
+            crossorigin="anonymous"
+        ></script>
         <title>WeatherApp</title>
     </head>
-    <body></body>
+
+    <body>
+        <header>
+            <h1>weatherApp</h1>
+        </header>
+        <main>
+            <section class="lst_section">
+                <div class="localisation_dev">
+                    <i
+                        class="fa-solid fa-location-dot"
+                        style="color: rgb(204, 58, 58)"
+                    ></i>
+                    <span class="localisation_span">Cesar</span>
+                </div>
+
+                <div class="search">
+                    <input
+                        type="text"
+                        class="search_bar"
+                        placeholder="eg.mostaganem"
+                    />
+                </div>
+                <div class="temp_toggle">
+                    <span>F°</span>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+            <!--  -->
+            <!--  -->
+
+            <section class="weather_card">
+                <div class="temp_weather">
+                    <div class="weather_icon">
+                        <img
+                            src="https://www.weatherbit.io/static/img/icons/r01d.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="weather_info">
+                        <div class="temperature">
+                            <h2>25°</h2>
+                        </div>
+                        <div class="description">
+                            <h3>Cloudy</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="wind_humidity">
+                    <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <span>80m</span>
+                    </div>
+                    <div class="humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span class="hum">56%</span>
+                    </div>
+                </div>
+                <div class="time">15.15.2002</div>
+                <!--  -->
+                <!--  -->
+            </section>
+        </main>
+    </body>
 </html>

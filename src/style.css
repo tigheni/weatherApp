@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+/* The switch - the box around the slider */
+.switch {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 2.25em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e7eff9;
+    outline: 1px solid #f3f8fe;
+    box-shadow:
+        0 4px 5px #f3f8fe inset,
+        0 4px 5px #c8d5e6;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: 'off';
+    font-size: 0.85em;
+    color: #d2d6d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 2em;
+    min-width: 2em;
+    border-radius: 20px;
+    left: 0.35em;
+    bottom: 0.3em;
+    background-color: transparent;
+    outline: 2px solid #d2d6d8;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider:before {
+    content: 'on';
+    background-color: #6ce961;
+    color: white;
+    transform: translateX(3.1em);
+}
+/* END */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Kavoon', cursive;
+    font-size: 1.2em;
+    background-color: #c8d5e6;
+    color: #3a3a3a;
+    height: 100vh;
+    width: 100vw;
+}
+.lst_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    gap: 15em;
+}
+.lst_section > div {
+    padding: 10px;
+    flex: 1;
+}
+header {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.search_bar {
+    outline: none;
+    border: none;
+    padding: 0.7rem;
+    width: 22em;
+    font-family: 'Kavoon', cursive;
+    border-radius: 20px;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp_toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0.25em;
+    font-size: 1.2em;
+    align-items: center;
+}
+.weather_card {
+    padding: 1em;
+    margin: 0.5rem auto;
+    border-radius: 20px;
+    max-width: fit-content;
+    background-color: #f3f8fe;
+    box-shadow:
+        0 4px 5px #f3f8fe inset,
+        0 4px 5px #c8d5e6;
+}
+.temp_weather {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+.wind_humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.time {
+    text-align: center;
+    margin: 10px 0 0px;
+}

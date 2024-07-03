@@ -1,11 +1,11 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const path = require('path');
 
 module.exports = merge(common, {
-    devtool: 'source-map',
     mode: 'production',
-    watch: true,
-    devServer: {
-        static: './dist',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.[contenthash].js', // Use content hash for caching
     },
 });
