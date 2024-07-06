@@ -77,7 +77,8 @@ html {
     justify-content: space-between;
     font-size: 1.2em;
     padding: 0.5em 1em;
-    gap: 15em;
+
+    gap: 10em;
 }
 .lst_section > div {
     padding: 10px;
@@ -97,11 +98,7 @@ header {
     font-family: 'Kavoon', cursive;
     border-radius: 20px;
 }
-.search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .temp_toggle {
     display: flex;
     justify-content: center;
@@ -135,4 +132,8 @@ header {
 .time {
     text-align: center;
     margin: 10px 0 0px;
+}
+.weather_icon {
+    width: 100px;
+    height: auto;
 }

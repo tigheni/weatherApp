@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./webpack.common.cjs');
 const path = require('path');
 
 module.exports = merge(common, {
@@ -7,10 +7,10 @@ module.exports = merge(common, {
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.join(__dirname, 'src'), // Serve from the 'src' directory
+            directory: path.join(__dirname, 'src'),
         },
         compress: true,
         port: 5050,
-        open: true, // Automatically open the browser
+        open: true,
     },
 });

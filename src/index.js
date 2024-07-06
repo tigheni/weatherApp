@@ -1,19 +1,25 @@
 import './style.css';
-import getWeather from './getWeather.js';
-const city = 'mesra';
-async function fetchWeatherData() {
+import renderWeatherData from './renderWeatherDom.js';
+import processDataJSON from './processJson.js';
+const key = 'fa27276d62f44a5a923174621242903';
+
+async function fetchWeatherData(city) {
     try {
-        const weatherData = await getWeather(city);
-        console.log(weatherData[0]);
-        const { lat, lon } = weatherData[0];
         const respond = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=eefc10c72ce2598ac67db863e6a4c261`,
+            `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`,
         );
-        const data = await respond.json();
-        console.log(data);
+
+        const processed = await processDataJSON(respond);
+        renderWeatherData(processed);
     } catch (error) {
         console.error('Failed to fetch weather data:', error);
     }
 }
 
-fetchWeatherData();
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const city = document.querySelector('.search_bar').value;
+        fetchWeatherData(city);
+    });
+});

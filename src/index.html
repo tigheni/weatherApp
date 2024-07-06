@@ -25,16 +25,21 @@
                 </div>
 
                 <div class="search">
-                    <input
-                        type="text"
-                        class="search_bar"
-                        placeholder="eg.mostaganem"
-                    />
+                    <form id="form">
+                        <input
+                            id="search_bar"
+                            type="text"
+                            class="search_bar"
+                            placeholder="eg.mostaganem"
+                            name="search"
+                            value=""
+                        />
+                    </form>
                 </div>
                 <div class="temp_toggle">
                     <span>F°</span>
                     <label class="switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" class="checkboxf" />
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -42,37 +47,7 @@
             <!--  -->
             <!--  -->
 
-            <section class="weather_card">
-                <div class="temp_weather">
-                    <div class="weather_icon">
-                        <img
-                            src="https://www.weatherbit.io/static/img/icons/r01d.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="weather_info">
-                        <div class="temperature">
-                            <h2>25°</h2>
-                        </div>
-                        <div class="description">
-                            <h3>Cloudy</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="wind_humidity">
-                    <div class="wind">
-                        <i class="fa-solid fa-wind"></i>
-                        <span>80m</span>
-                    </div>
-                    <div class="humidity">
-                        <i class="fa-solid fa-droplet"></i>
-                        <span class="hum">56%</span>
-                    </div>
-                </div>
-                <div class="time">15.15.2002</div>
-                <!--  -->
-                <!--  -->
-            </section>
+            <section class="weather_card"></section>
         </main>
     </body>
 </html>
