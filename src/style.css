@@ -75,7 +75,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2em;
+    font-size: 1 em;
     padding: 0.5em 1em;
 
     gap: 10em;
@@ -85,7 +85,7 @@ html {
     flex: 1;
 }
 header {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: center;
     margin: 0.5em 0;
 }
@@ -106,7 +106,7 @@ header {
     font-size: 1.2em;
     align-items: center;
 }
-.weather_card {
+.active_weather_card {
     padding: 1em;
     margin: 0.5rem auto;
     border-radius: 20px;
@@ -136,4 +136,32 @@ header {
 .weather_icon {
     width: 100px;
     height: auto;
+}
+
+.loader-container {
+    display: none;
+    justify-content: center;
+    align-items: start;
+    margin-top: 100px;
+    height: 100vh;
+}
+
+.pulsing-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #ff5c35;
+    border-radius: 50%;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
 }

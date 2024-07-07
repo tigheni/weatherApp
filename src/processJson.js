@@ -1,8 +1,4 @@
-export default async function processDataJSON(response) {
-    const data = await response.json();
-
-    console.log(data);
-
+export default async function processDataJSON(data) {
     const weatherData = {
         location: data.location.name,
         regiom: data.location.region,
@@ -18,6 +14,7 @@ export default async function processDataJSON(response) {
         uv: data.current.uv,
         visibility: data.current.vis_km,
         icon: data.current.condition.icon,
+        time: data.location.localtime,
     };
 
     return weatherData;

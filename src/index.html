@@ -9,10 +9,9 @@
         ></script>
         <title>WeatherApp</title>
     </head>
-
     <body>
         <header>
-            <h1>weatherApp</h1>
+            <h1>WeatherApp</h1>
         </header>
         <main>
             <section class="lst_section">
@@ -21,9 +20,8 @@
                         class="fa-solid fa-location-dot"
                         style="color: rgb(204, 58, 58)"
                     ></i>
-                    <span class="localisation_span">Cesar</span>
+                    <span class="localisation_span">Welcome</span>
                 </div>
-
                 <div class="search">
                     <form id="form">
                         <input
@@ -44,10 +42,12 @@
                     </label>
                 </div>
             </section>
-            <!--  -->
-            <!--  -->
-
-            <section class="weather_card"></section>
+            <section class="weather_card">
+                <div class="loader-container">
+                    <div class="pulsing-circle"></div>
+                </div>
+                <div class="weather_data"></div>
+            </section>
         </main>
     </body>
 </html>
