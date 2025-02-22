@@ -14,7 +14,7 @@ async function fetchWeatherData(city) {
         await new Promise((resolve) => setTimeout(resolve, 200));
 
         const response = await fetch(
-            `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`,
+            `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`
         );
 
         if (!response.ok) {
@@ -23,12 +23,7 @@ async function fetchWeatherData(city) {
 
         const data = await response.json();
 
-        console.log('data', data);
-
         const processed = await processDataJSON(data);
-
-        console.log('processed', processed);
-
         renderWeatherData(processed);
     } catch (error) {
         console.error('Failed to fetch weather data:', error);
